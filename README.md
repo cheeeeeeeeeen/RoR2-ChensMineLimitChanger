@@ -11,11 +11,11 @@
 
 ## Description
 
-A Risk of Rain 2 mod that changes the limit of Engineer's mines. That's it. Configurable.
+A Risk of Rain 2 mod that changes the limit and storage of Engineer's mines. That's it. Configurable.
 
 ## Installation
 
-Use **[r2modman](https://thunderstore.io/package/ebkr/r2modman/)** mod manager to install this mod.
+Use **[Thunderstore Mod Manager](https://www.overwolf.com/app/Thunderstore-Thunderstore_Mod_Manager)** to install this mod.
 
 If one does not want to use a mod manager, then get the DLL from **[Thunderstore](https://thunderstore.io/package/Chen/ChensMineLimitChanger/)**.
 
