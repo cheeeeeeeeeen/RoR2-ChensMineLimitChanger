@@ -109,7 +109,7 @@ namespace Chen.MineLimitChanger
 
         private string BuildTurretDescription()
         {
-            return $"blah blah place a turret it shoots enemies. I don't know what the original desc said." +
+            return $"Place a turret that inherits all your items. Fires a cannon for 100% damage." +
                    $" Can place up to {turretCount}.";
         }
     }
