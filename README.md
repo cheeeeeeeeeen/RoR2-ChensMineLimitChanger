@@ -11,7 +11,7 @@
 
 ## Description
 
-A Risk of Rain 2 mod that changes the limit and storage of Engineer's mines. That's it. Configurable.
+A Risk of Rain 2 mod that changes the limit and storage of Engineer's mines as well as the turrets. That's it. Configurable.
 
 ## Installation
 
