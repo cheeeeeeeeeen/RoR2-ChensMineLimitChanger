@@ -1,8 +1,8 @@
 {
   "name": "ChensMineLimitChanger",
-  "version_number": "1.0.1",
+  "version_number": "2.0.0",
   "website_url": "https://github.com/cheeeeeeeeeen/RoR2-ChensMineLimitChanger",
-  "description": "A Risk of Rain 2 mod that changes the limit and storage of Engineer's mines. That's it. Configurable.",
+  "description": "A Risk of Rain 2 mod that changes the limit and storage of Engineer's mines as well as the turrets (thanks to the community effort). That's it. Configurable.",
   "dependencies": [
     "bbepis-BepInExPack-5.4.9",
     "tristanmcpherson-R2API-3.0.43",
