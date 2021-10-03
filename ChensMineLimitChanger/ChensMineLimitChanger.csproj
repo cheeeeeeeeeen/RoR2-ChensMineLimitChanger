@@ -54,6 +54,9 @@
     <Reference Include="UnityEngine.PhysicsModule">
       <HintPath>lib\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
+    <Reference Include="HarmonyLib">
+      <HintPath>lib\0Harmony.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
