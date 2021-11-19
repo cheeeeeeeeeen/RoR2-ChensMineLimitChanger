@@ -10,7 +10,20 @@ namespace Chen.MineLimitChanger.Patches
         private static void Postfix(CharacterMaster __instance, ref int __result, DeployableSlot slot)
         {
             if (!__instance) return;
-            if (slot == DeployableSlot.EngiTurret) __result = ModPlugin.turretCount;
+            switch (slot)
+            {
+                case DeployableSlot.EngiTurret:
+                    __result = ModPlugin.turretFieldCount;
+                    break;
+
+                case DeployableSlot.EngiMine:
+                    __result = ModPlugin.pressureMinesFieldCount;
+                    break;
+
+                case DeployableSlot.EngiSpiderMine:
+                    __result = ModPlugin.spiderMinesFieldCount;
+                    break;
+            }
         }
     }
 }

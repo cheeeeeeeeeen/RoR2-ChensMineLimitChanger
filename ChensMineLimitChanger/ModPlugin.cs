@@ -31,7 +31,7 @@ namespace Chen.MineLimitChanger
 #if DEBUG
             "0." +
 #endif
-            "2.0.0";
+            "2.0.1";
 
         /// <summary>
         /// This mod's name.
@@ -51,19 +51,29 @@ namespace Chen.MineLimitChanger
         private static ConfigFile config;
         private static int pressureMinesCount = 10;
         private static int spiderMinesCount = 4;
+        private static int turretCount = 2;
 
-        public static int turretCount = 2;
+        public static int turretFieldCount = turretCount;
+        public static int pressureMinesFieldCount = pressureMinesCount;
+        public static int spiderMinesFieldCount = spiderMinesCount;
 
         private void Awake()
         {
-            var harmony = new Harmony("com.pudy248.TurretCountChanger");
-            harmony.PatchAll();
-
             Log = new Log(Logger);
             config = new ConfigFile(Path.Combine(Paths.ConfigPath, ModGuid + ".cfg"), true);
-            pressureMinesCount = config.Bind("Main", "Pressure Mines Count", pressureMinesCount, "Changes the limit and storage of the Pressure Mines.").Value;
-            spiderMinesCount = config.Bind("Main", "Spider Mines Count", spiderMinesCount, "Changes the limit and storage of the Spider Mines.").Value;
-            turretCount = config.Bind("Main", "Turret Count", turretCount, "Changes the limit and storage of the base Turret.").Value;
+            pressureMinesCount = config.Bind("Main", "Pressure Mines Count", pressureMinesCount, "Changes the storage of the Pressure Mines.").Value;
+            spiderMinesCount = config.Bind("Main", "Spider Mines Count", spiderMinesCount, "Changes the storage of the Spider Mines.").Value;
+            turretCount = config.Bind("Main", "Turret Count", turretCount, "Changes the storage of the base Turret.").Value;
+            pressureMinesFieldCount = config.Bind("Main", "Pressure Mines Field Limit", pressureMinesFieldCount, "Changes the field limit of Pressure Mines.").Value;
+            spiderMinesFieldCount = config.Bind("Main", "Spider Mines Field Limit", spiderMinesFieldCount, "Changes the field limit of Spider Mines.").Value;
+            turretFieldCount = config.Bind("Main", "Turret Field Limit", turretFieldCount, "Changes the field limit of turrets.").Value;
+
+            var harmony = new Harmony("com.pudy248.TurretCountChanger");
+            Log.Message("Harmony Patch com.pudy248.TurretCountChanger initialized.");
+            harmony.PatchAll();
+            Log.Message($"Changed, by logic, Pressure Mines Field Limit to {pressureMinesFieldCount}.");
+            Log.Message($"Changed, by logic, Spider Mines Field Limit to {spiderMinesFieldCount}.");
+            Log.Message($"Changed, by logic, Turrets Field Limit to {turretFieldCount}.");
 
             SkillDef pressureMineSkillDef = Resources.Load<SkillDef>("skilldefs/engibody/EngiBodyPlaceMine");
             if (pressureMineSkillDef.baseMaxStock == pressureMinesCount)
@@ -108,19 +118,22 @@ namespace Chen.MineLimitChanger
         private string BuildPressureMinesDescription()
         {
             return $"Place a two-stage mine that deals <style=cIsDamage>300% damage</style>, or <style=cIsDamage>900% damage</style> if fully armed." +
-                   $" Can place up to {pressureMinesCount}.";
+                   $" Can store up to {pressureMinesCount}." +
+                   $" Can place up to {pressureMinesFieldCount}.";
         }
 
         private string BuildSpiderMinesDescription()
         {
             return $"Place a robot mine that deals <style=cIsDamage>600% damage</style> when an enemy walks nearby." +
-                   $" Can place up to {spiderMinesCount}.";
+                   $" Can store up to {spiderMinesCount}." +
+                   $" Can place up to {spiderMinesFieldCount}.";
         }
 
         private string BuildTurretDescription()
         {
             return $"Place a turret that inherits all your items. Fires a cannon for 100% damage." +
-                   $" Can place up to {turretCount}.";
+                   $" Can store up to {turretCount}." +
+                   $" Can place up to {turretFieldCount}.";
         }
 
         internal static bool DebugCheck()
