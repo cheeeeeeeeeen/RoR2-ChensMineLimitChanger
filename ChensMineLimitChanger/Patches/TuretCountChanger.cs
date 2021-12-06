@@ -17,11 +17,11 @@ namespace Chen.MineLimitChanger.Patches
                     break;
 
                 case DeployableSlot.EngiMine:
-                    __result = ModPlugin.pressureMinesFieldCount;
+                    __result = ModPlugin.pressureMinesFieldCount + __instance.inventory.GetItemCount(RoR2Content.Items.SecondarySkillMagazine);
                     break;
 
                 case DeployableSlot.EngiSpiderMine:
-                    __result = ModPlugin.spiderMinesFieldCount;
+                    __result = ModPlugin.spiderMinesFieldCount + __instance.inventory.GetItemCount(RoR2Content.Items.SecondarySkillMagazine);
                     break;
             }
         }
