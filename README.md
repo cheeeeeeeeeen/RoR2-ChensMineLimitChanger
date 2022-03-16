@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/Version-2.0.2-orange)
+![Version](https://img.shields.io/badge/Version-2.0.3-orange)
 ![Build](https://github.com/cheeeeeeeeeen/RoR2-ChensMineLimitChanger/workflows/Build/badge.svg)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Support Chen](https://img.shields.io/badge/Support-Chen-ff69b4)](https://ko-fi.com/cheeeeeeeeeen)
@@ -27,6 +27,10 @@ If one does not want to use a mod manager, then get the DLL from **[Thunderstore
 - Give a tip through Ko-fi: https://ko-fi.com/cheeeeeeeeeen
 
 ## Changelog
+
+**2.0.3**
+- Allow Lysate Cells to properly interact with the mod.
+- Add config option on how Lysate Cells should work with the turrets.
 
 **2.0.2**
 - Allow Backup Magazine to affect the changing of mine limits as well.

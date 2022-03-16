@@ -31,7 +31,7 @@ namespace Chen.MineLimitChanger
 #if DEBUG
             "0." +
 #endif
-            "2.0.2";
+            "2.0.3";
 
         /// <summary>
         /// This mod's name.
