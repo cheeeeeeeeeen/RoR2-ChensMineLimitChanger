@@ -56,6 +56,7 @@ namespace Chen.MineLimitChanger
         public static int turretFieldCount = turretCount;
         public static int pressureMinesFieldCount = pressureMinesCount;
         public static int spiderMinesFieldCount = spiderMinesCount;
+        public static bool lysateCellIncrement = false;
 
         private void Awake()
         {
@@ -67,6 +68,9 @@ namespace Chen.MineLimitChanger
             pressureMinesFieldCount = config.Bind("Main", "Pressure Mines Field Limit", pressureMinesFieldCount, "Changes the field limit of Pressure Mines.").Value;
             spiderMinesFieldCount = config.Bind("Main", "Spider Mines Field Limit", spiderMinesFieldCount, "Changes the field limit of Spider Mines.").Value;
             turretFieldCount = config.Bind("Main", "Turret Field Limit", turretFieldCount, "Changes the field limit of turrets.").Value;
+            lysateCellIncrement = config.Bind("Main", "Lysate Cell Mechanics", lysateCellIncrement,
+                                              "Set to true if you want the number of turrets on field to also increase by the number of Lysate Cells held. " +
+                                              "Set to false to only increase by turret field count by 1 if any Lysate Cells are held.").Value;
 
             var harmony = new Harmony("com.pudy248.TurretCountChanger");
             Log.Message("Harmony Patch com.pudy248.TurretCountChanger initialized.");

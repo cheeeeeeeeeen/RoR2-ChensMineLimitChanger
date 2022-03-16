@@ -13,7 +13,16 @@ namespace Chen.MineLimitChanger.Patches
             switch (slot)
             {
                 case DeployableSlot.EngiTurret:
+                    int lysateCellCount = __instance.inventory.GetItemCount(DLC1Content.Items.EquipmentMagazineVoid);
                     __result = ModPlugin.turretFieldCount;
+                    if (ModPlugin.lysateCellIncrement)
+                    {
+                        __result += lysateCellCount;
+                    }
+                    else if (lysateCellCount > 0)
+                    {
+                        __result += 1;
+                    }
                     break;
 
                 case DeployableSlot.EngiMine:
