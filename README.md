@@ -1,10 +1,7 @@
 ![Version](https://img.shields.io/badge/Version-2.0.3-orange)
-![Build](https://github.com/cheeeeeeeeeen/RoR2-ChensMineLimitChanger/workflows/Build/badge.svg)
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Support Chen](https://img.shields.io/badge/Support-Chen-ff69b4)](https://ko-fi.com/cheeeeeeeeeen)
-
 [![GitHub issues](https://img.shields.io/github/issues/cheeeeeeeeeen/RoR2-ChensMineLimitChanger)](https://github.com/cheeeeeeeeeen/RoR2-ChensMineLimitChanger/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/cheeeeeeeeeen/RoR2-ChensMineLimitChanger)](https://github.com/cheeeeeeeeeen/RoR2-ChensMineLimitChanger/pulls)
+[![Support Chen](https://img.shields.io/badge/Support-Chen-ff69b4)](https://ko-fi.com/cheeeeeeeeeen)
 ![Maintenance Status](https://img.shields.io/badge/Maintenance-Inactive-orange)
 
 # Chen's Mine Limit Changer
@@ -27,6 +24,10 @@ If one does not want to use a mod manager, then get the DLL from **[Thunderstore
 - Give a tip through Ko-fi: https://ko-fi.com/cheeeeeeeeeen
 
 ## Changelog
+
+**2.0.4**
+- Remove tests to decrease complexity for new maintainers.
+- Update lib to nuget.
 
 **2.0.3**
 - Allow Lysate Cells to properly interact with the mod.
