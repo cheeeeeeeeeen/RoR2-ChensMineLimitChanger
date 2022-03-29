@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/Version-2.0.3-orange)
+![Version](https://img.shields.io/badge/Version-2.0.4-orange)
 [![GitHub issues](https://img.shields.io/github/issues/cheeeeeeeeeen/RoR2-ChensMineLimitChanger)](https://github.com/cheeeeeeeeeen/RoR2-ChensMineLimitChanger/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/cheeeeeeeeeen/RoR2-ChensMineLimitChanger)](https://github.com/cheeeeeeeeeen/RoR2-ChensMineLimitChanger/pulls)
 [![Support Chen](https://img.shields.io/badge/Support-Chen-ff69b4)](https://ko-fi.com/cheeeeeeeeeen)
